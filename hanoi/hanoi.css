@@ -1,0 +1,28 @@
+div.disk {
+	background-color: gray;
+	margin-left: auto;
+	margin-right: auto;
+	height: 70px;
+	border: 2px solid black;
+}
+
+div.pile {
+	background-color: yellow;
+	width: 200px;
+	height: 240px;
+	float: left;
+	border: 2px dashed black;
+}
+
+[data-size="1"] {
+	width: 60px;
+
+}
+
+[data-size="2"] {
+	width: 120px;
+}
+
+[data-size="3"] {
+	width: 180px;
+}
