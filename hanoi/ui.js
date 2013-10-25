@@ -13,14 +13,14 @@
 		if (this.pileNumber < 0) {
 			this.pileNumber = parseInt(toPile.data("id"));
 			var fromPile = $('.pile').eq(this.pileNumber);
-			fromPile.children().eq(0).css("background-color", "red");
+			fromPile.children().eq(0).addClass("highlighted");
 		} else {
 			var toPileNumber = parseInt(toPile.data("id"));
 			if (this.pileNumber !== toPileNumber) {
 				if (this.game.move(this.pileNumber, toPileNumber)) {
 					var fromPile = $('.pile').eq(this.pileNumber);
 					var topDisk = fromPile.children().eq(0).detach();
-					topDisk.css("background-color", "gray");
+					topDisk.removeClass("highlighted");
 
 					toPile.prepend(topDisk);
 					if (this.game.isWon()) {
@@ -30,7 +30,7 @@
 				}
 			}
 			var fromPile = $('.pile').eq(this.pileNumber);
-			fromPile.children().eq(0).css("background-color", "gray");
+			fromPile.children().eq(0).removeClass("highlighted");
 			this.pileNumber = -1;
 		}
 	}

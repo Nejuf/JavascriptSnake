@@ -6,6 +6,10 @@ div.disk {
 	border: 2px solid black;
 }
 
+div .disk.highlighted {
+	background-color: red;
+}
+
 div.pile {
 	background-color: yellow;
 	width: 200px;
@@ -13,6 +17,8 @@ div.pile {
 	float: left;
 	border: 2px dashed black;
 }
+
+
 
 [data-size="1"] {
 	width: 60px;
